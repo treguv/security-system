@@ -1,11 +1,12 @@
 package controller;
 
 import javafx.fxml.FXML;
+import javafx.scene.Cursor;
 import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.paint.Color;
 import model.Thumbnail;
 
-import java.util.ArrayList;
 
 public class Controller {
 
@@ -27,12 +28,21 @@ public class Controller {
             Thumbnail thumbnail = new Thumbnail(video, this);
             myFlowPane.getChildren().add(thumbnail);
         }
-        System.out.println("works");
     }
 
     @FXML
     public void delete(final Thumbnail theThumbnail) {
         myFlowPane.getChildren().remove(theThumbnail);
+    }
+
+    @FXML
+    public void highlight() {
+        myHome.setStyle("-fx-background-color: #757575; -fx-text-fill: #ffffff");
+    }
+
+    @FXML
+    public void unhighlight() {
+        myHome.setStyle("-fx-background-color: #1f1b24; -fx-text-fill: #616161");
     }
 
 }
