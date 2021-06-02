@@ -5,7 +5,9 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
 import model.Thumbnail;
 
-public class Controller{
+import java.util.ArrayList;
+
+public class Controller {
 
     //test 'videos'
     private String[] myVideos = {"Motion_detected", "Recording_1", "Live_Replay", "Recording_2", "Recording_3"};
@@ -22,9 +24,15 @@ public class Controller{
     public void initialize() {
         //Adds videos to flow pane
         for(String video : myVideos) {
-            myFlowPane.getChildren().add(new Thumbnail(video));
+            Thumbnail thumbnail = new Thumbnail(video, this);
+            myFlowPane.getChildren().add(thumbnail);
         }
         System.out.println("works");
-
     }
+
+    @FXML
+    public void delete(final Thumbnail theThumbnail) {
+        myFlowPane.getChildren().remove(theThumbnail);
+    }
+
 }

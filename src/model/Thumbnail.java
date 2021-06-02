@@ -1,5 +1,6 @@
 package model;
 
+import controller.Controller;
 import javafx.scene.Cursor;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -16,8 +17,11 @@ public class Thumbnail extends AnchorPane {
 
     private String myTitle;
 
-    public Thumbnail(final String theTitle) {
+    private Controller myController;
+
+    public Thumbnail(final String theTitle, final Controller theController) {
         myTitle = theTitle;
+        myController = theController;
         setPrefSize(121, 132);
         ImageView[] views = setupImages();
         for (ImageView view : views) {
@@ -47,6 +51,8 @@ public class Thumbnail extends AnchorPane {
         trashIcon.setLayoutY(105);
         trashIcon.setPickOnBounds(true);
         trashIcon.setPreserveRatio(true);
+        trashIcon.setOnMouseEntered(e -> setCursor(Cursor.HAND));
+        trashIcon.setOnMouseClicked(e -> myController.delete(this));
         return new ImageView[] {defaultImage, trashIcon};
     }
 
