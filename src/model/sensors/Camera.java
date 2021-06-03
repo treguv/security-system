@@ -5,7 +5,7 @@ package model.sensors;
  * @author vlad
  * @version 1
  */
-public class Camera {
+public class Camera implements Sensor{
     private boolean isOnline;
     private boolean isDetectingMotion = false;
 
@@ -55,5 +55,7 @@ public class Camera {
     public void setDetectingMotion(boolean theDetection){
         isDetectingMotion = theDetection;
     }
-
+    public boolean isTriggered(){
+        return isDetectingMotion;
+    }
 }
