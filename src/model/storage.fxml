@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="616.0" style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+    <center>
+        <ScrollPane prefHeight="361.0" prefWidth="476.0" style="-fx-background-color: #121212;" BorderPane.alignment="CENTER">
+            <FlowPane fx:id="myFlowPane" prefHeight="384.0" prefWidth="558.0" style="-fx-background-color: #121212;" />
+        </ScrollPane>
+    </center>
+    <top>
+        <HBox style="-fx-background-color: #1f1b24;" BorderPane.alignment="CENTER">
+            <Label fx:id="myHome" onMouseEntered="#highlight" onMouseExited="#unhighlight" prefHeight="39.0" prefWidth="50.0" text="Home " textAlignment="RIGHT" textFill="#616161">
+                <font>
+                    <Font name="Ebrima" size="12.0" />
+                </font>
+                <opaqueInsets>
+                    <Insets />
+                </opaqueInsets>
+            <padding>
+               <Insets left="10.0" />
+            </padding>
+            </Label>
+            <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../../resources/home.png" />
+                <HBox.margin>
+                    <Insets top="10.0" />
+                </HBox.margin>
+            </ImageView>
+        </HBox>
+    </top>
+    <left>
+        <VBox prefHeight="386.0" prefWidth="56.0" style="-fx-background-color: #121212;" BorderPane.alignment="CENTER">
+            <Label textFill="#626262">
+                <padding>
+                    <Insets left="13.0" />
+                </padding>
+            </Label>
+        </VBox>
+    </left>
+</BorderPane>
