@@ -2,7 +2,6 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
@@ -20,12 +19,6 @@
                <Insets left="10.0" />
             </padding>
             </Label>
-            <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="@../../resources/home.png" />
-                <HBox.margin>
-                    <Insets top="10.0" />
-                </HBox.margin>
-            </ImageView>
         </HBox>
     </top>
    <left>
@@ -35,17 +28,8 @@
       <FlowPane fx:id="myFlowPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
    </center>
    <right>
-       <VBox prefHeight="386.0" prefWidth="167.0" BorderPane.alignment="CENTER">
-           <Label text="Test 1" id="testButton"/>
-           <Label text="Test 2" id="testButton"/>
-           <Label text="Test 3" id="testButton"/>
-           <Label text="Test 4" id="testButton"/>
-           <Label text="Test 5" id="testButton"/>
-           <Label text="Test 6" id="testButton"/>
-           <Label text="Test 7" id="testButton"/>
-           <Label text="Test 8" id="testButton"/>
-           <Label text="Test 9" id="testButton"/>
-           <Label text="Test 10" id="testButton"/>
+       <VBox fx:id="myVBox" prefHeight="386.0" prefWidth="126.0" style="-fx-background-color: #1f1b24;" BorderPane.alignment="CENTER">
+
        </VBox>
    </right>
 </BorderPane>
