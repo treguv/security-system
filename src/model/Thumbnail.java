@@ -8,7 +8,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 
-//creates thumbnails
+/**
+ * This class creates
+ */
 public class Thumbnail extends AnchorPane {
 
     public static Image DEFAULT_IMAGE = new Image("img_sample.png");
