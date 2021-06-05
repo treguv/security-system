@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="616.0" style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
-    <center>
-        <ScrollPane prefHeight="361.0" prefWidth="476.0" style="-fx-background-color: #121212;" BorderPane.alignment="CENTER">
-            <FlowPane fx:id="myFlowPane" prefHeight="384.0" prefWidth="558.0" style="-fx-background-color: #121212;" />
-        </ScrollPane>
-    </center>
     <top>
         <HBox style="-fx-background-color: #1f1b24;" BorderPane.alignment="CENTER">
             <Label fx:id="myHome" onMouseEntered="#highlight" onMouseExited="#unhighlight" prefHeight="39.0" prefWidth="50.0" text="Home " textAlignment="RIGHT" textFill="#616161">
@@ -33,13 +29,26 @@
             </ImageView>
         </HBox>
     </top>
-    <left>
-        <VBox prefHeight="386.0" prefWidth="56.0" style="-fx-background-color: #121212;" BorderPane.alignment="CENTER">
-            <Label textFill="#626262">
-                <padding>
-                    <Insets left="13.0" />
-                </padding>
-            </Label>
-        </VBox>
-    </left>
+   <left>
+      <Pane prefHeight="386.0" prefWidth="26.0" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <FlowPane fx:id="myFlowPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <right>
+      <VBox prefHeight="386.0" prefWidth="167.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Test 1" id="testButton"/>
+            <Label text="Test 2" id="testButton"/>
+            <Label text="Test 3" id="testButton"/>
+            <Label text="Test 4" id="testButton"/>
+            <Label text="Test 5" id="testButton"/>
+            <Label text="Test 6" id="testButton"/>
+            <Label text="Test 7" id="testButton"/>
+            <Label text="Test 8" id="testButton"/>
+            <Label text="Test 9" id="testButton"/>
+            <Label text="Test 10" id="testButton"/>
+         </children>
+      </VBox>
+   </right>
 </BorderPane>

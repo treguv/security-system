@@ -11,7 +11,7 @@ import model.Thumbnail;
 public class Controller {
 
     //test 'videos'
-    private String[] myVideos = {"Motion_detected", "Recording_1", "Live_Replay", "Recording_2", "Recording_3"};
+    private String[] myVideos = {"Motion_1", "Recording_1", "Live_Replay", "Recording_2", "Recording_3"};
 
     //flow pane that contains the video thumbnails
     @FXML
