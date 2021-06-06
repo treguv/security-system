@@ -5,14 +5,16 @@ package model.sensors;
  * @author vlad
  * @version 1
  */
-public class Camera implements Sensor{
+public class Camera extends Sensor implements IsTriggerable {
     private boolean isOnline;
     private boolean isDetectingMotion = false;
+    private String myName;
 
     /**
      * default constructor sets camera online.
      */
-    public Camera(){
+    public Camera(String theName){
+        super(theName);
         isOnline = true;
     }
 
@@ -58,4 +60,10 @@ public class Camera implements Sensor{
     public boolean isTriggered(){
         return isDetectingMotion;
     }
+//    @Override
+//    public void trigger() {
+//
+//        System.out.println("Pleae");
+//    }
+
 }

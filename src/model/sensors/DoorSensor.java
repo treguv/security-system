@@ -5,10 +5,11 @@ package model.sensors;
  * @author vlad
  * @version 1
  */
-public class DoorSensor implements  Sensor {
+public class DoorSensor extends Sensor implements IsTriggerable {
+    private String myName;
     private boolean doorOpen = false;
-    public DoorSensor(){
-
+    public DoorSensor(String theName){
+        super(theName);
     }
     public void setDoorStatus(boolean theDoorStatus){
         doorOpen = theDoorStatus;

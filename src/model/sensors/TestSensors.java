@@ -5,14 +5,24 @@ package model.sensors;
  * It is to be removed when we submit the final version
  */
 public class TestSensors {
-    public static void main(String[] args) {
-        // make a new keypad
-        Keypad keypad = new Keypad();
-        System.out.println(keypad.getMyPin());
-        //update the pin
-        keypad.updatePin("1234", "4321");
-        System.out.println(keypad.getMyPin());
-        keypad.updatePin("123sdf4", "4321");
+    //build out a basic array of sensors that we will use for testing
+    private Sensor frontCamera = new Camera("Front Door ");
+    private Camera backyardCamera = new Camera("Back Door");
+    private DoorbellCamera doorbellCamera = new DoorbellCamera("Doorbell Camera");
+
+    /**
+     * This method will simulate a robber breaking into the house to allow
+     * for testing of the security system
+     */
+    public void simulateBreakin(){
+        backyardCamera.trigger();
+        frontCamera.trigger();
+    }
+
+    /**
+     * TODO add what happens in a power outage
+     */
+    public void powerOutage(){
 
     }
 }
