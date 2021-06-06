@@ -22,6 +22,8 @@ public class Main extends Application {
         primaryStage.show();
         TestSensors testSensors = new TestSensors();
         testSensors.simulateBreakin();
+        testSensors.simulateDoorBellRing();
+        testSensors.simulateContactEmergencyServices();
     }
 
     public static void main(String[] args) {
