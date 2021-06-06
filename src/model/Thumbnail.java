@@ -12,7 +12,7 @@ import javafx.scene.layout.AnchorPane;
  */
 public class Thumbnail extends AnchorPane {
 
-    public static Image DEFAULT_IMAGE = new Image("img_sample.png");
+    public static Image DEFAULT_IMAGE = new Image("img_sample3.png");
 
     public static Image TRASH_ICON = new Image("trash.png");
 
