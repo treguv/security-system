@@ -4,14 +4,15 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
 <?import javafx.geometry.Insets?>
-<HBox fx:id="myHBox" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx" style="-fx-background-color: #212121"
+<HBox fx:id="myHBox" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx" stylesheets="myNavbar.css"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="controller.MyNavbar" >
     <Label fx:id="myHome" prefHeight="39.0" prefWidth="62.0" text="Home" textAlignment="RIGHT" textFill="white"
+           font=""
            onMouseEntered="#highlight" onMouseExited="#unhighlight">
-        <font>
-            <Font name="Ebrima" size="16.0" />
-        </font>
+<!--        <font>-->
+<!--            <Font name="Ebrima" size="16.0" />-->
+<!--        </font>-->
         <opaqueInsets>
             <Insets />
         </opaqueInsets>
