@@ -2,10 +2,7 @@
 
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="616.0" stylesheets="@storage.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
-    <top>
-        <fx:include source="myNavbar.fxml" />
-    </top>
+<BorderPane fx:id = "pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"  prefWidth="616.0" stylesheets="@storage.css" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
    <left>
       <Pane prefHeight="386.0" prefWidth="26.0" BorderPane.alignment="CENTER" />
    </left>
