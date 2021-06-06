@@ -2,16 +2,21 @@ package controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.Cursor;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import model.TestButton;
 import model.Thumbnail;
 
 
 public class Controller {
 
     //test 'videos'
-    private String[] myVideos = {"Motion_detected", "Recording_1", "Live_Replay", "Recording_2", "Recording_3"};
+    private String[] myVideos = {"Motion_1", "Recording_1", "Live_Replay", "Recording_2", "Recording_3"};
+
+    private String[] myButtons = {"Test_1", "Test_2", "Test_3", "Test_4", "Test_5"};
 
     //flow pane that contains the video thumbnails
     @FXML
@@ -22,11 +27,18 @@ public class Controller {
     private Label myHome;
 
     @FXML
+    private VBox myVBox;
+
+    @FXML
     public void initialize() {
         //Adds videos to flow pane
         for(String video : myVideos) {
             Thumbnail thumbnail = new Thumbnail(video, this);
             myFlowPane.getChildren().add(thumbnail);
+        }
+        for(String button : myButtons) {
+            TestButton testButton = new TestButton(button, this);
+            myVBox.getChildren().add(testButton);
         }
     }
 
@@ -40,9 +52,17 @@ public class Controller {
         myHome.setStyle("-fx-background-color: #757575; -fx-text-fill: #ffffff");
     }
 
+    public void highlight(final Label theLabel) {
+        theLabel.setStyle("-fx-background-color: #757575; -fx-text-fill: #ffffff");
+    }
+
     @FXML
     public void unhighlight() {
         myHome.setStyle("-fx-background-color: #1f1b24; -fx-text-fill: #616161");
+    }
+
+    public void unhighlight(final Label theLabel) {
+        theLabel.setStyle("-fx-background-color: #1f1b24; -fx-text-fill: #616161");
     }
 
 }
