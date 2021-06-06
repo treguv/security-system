@@ -17,16 +17,13 @@ public class Controller {
     //Sample videos
     private final String[] myVideos = {"Motion_1", "Recording_1", "Live_Replay", "Recording_2", "Recording_3"};
 
-    //Sample test buttons
-    private final String[] myButtons = {"Test_1", "Test_2", "Test_3", "Test_4", "Test_5"};
+
     public BorderPane pane;
 
 
     @FXML
     private FlowPane myFlowPane;
 
-    @FXML
-    private VBox myVBox;
 
     @FXML
     public void initialize() {
@@ -35,11 +32,7 @@ public class Controller {
             Thumbnail thumbnail = new Thumbnail(video, this);
             myFlowPane.getChildren().add(thumbnail);
         }
-        //Adds sample test buttons to vbox
-        for(String button : myButtons) {
-            TestButton testButton = new TestButton(button, this);
-            myVBox.getChildren().add(testButton);
-        }
+
 
     }
 
