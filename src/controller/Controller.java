@@ -16,7 +16,7 @@ public class Controller {
     //test 'videos'
     private String[] myVideos = {"Motion_1", "Recording_1", "Live_Replay", "Recording_2", "Recording_3"};
 
-    private String[] myButtons = {"Test_1", "Test_2", "Test_3", "Test_4", "Test_5"};
+    private String[] myButtons = {"Break In", "Power Outage ", "Ring Doorbell", "Detect Motion", "Emergency Services"};
 
     //flow pane that contains the video thumbnails
     @FXML
@@ -36,8 +36,13 @@ public class Controller {
             Thumbnail thumbnail = new Thumbnail(video, this);
             myFlowPane.getChildren().add(thumbnail);
         }
+        //for now gonna make buttons manually so i can assign the correct events to it
+        //TODO this might be where we need to declare sensors
+        //This for loop probably needs to be replaced with individual declarations
+        //All code for event sim is in testsensors
         for(String button : myButtons) {
             TestButton testButton = new TestButton(button, this);
+//            testButton.setOnMouseClicked();
             myVBox.getChildren().add(testButton);
         }
     }
