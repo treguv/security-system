@@ -14,9 +14,6 @@ import model.Thumbnail;
 
 public class Controller {
 
-    //text color
-    public static Color TEXT_COLOR = Color.valueOf("ffffff");
-
     //Sample videos
     private final String[] myVideos = {"Motion_1", "Recording_1", "Live_Replay", "Recording_2", "Recording_3"};
 
@@ -26,25 +23,8 @@ public class Controller {
     @FXML
     private FlowPane myFlowPane;
 
-
     @FXML
     private VBox myVBox;
-
-
-    @FXML
-    private BorderPane myBorderPane;
-
-    @FXML
-    public void highlight(Label label) {
-        //color for when mouse is hovering over a label
-        label.setStyle("-fx-background-color: #383838; -fx-text-fill: #ffffff");
-    }
-
-    @FXML
-    public void unhighlight(Label label) {
-        //this should match the side menu and nav bar
-        label.setStyle("-fx-background-color: #212121; -fx-text-fill: #ffffff");
-    }
 
     @FXML
     public void initialize() {
@@ -58,17 +38,12 @@ public class Controller {
             TestButton testButton = new TestButton(button, this);
             myVBox.getChildren().add(testButton);
         }
-        //test button side menu color and nav bar color
-        //these two should match
-        myVBox.setStyle("-fx-background-color: #212121");
-        //background color
-        myBorderPane.setStyle("-fx-background-color: #181818");
+
     }
 
     @FXML
     public void delete(final Thumbnail theThumbnail) {
         myFlowPane.getChildren().remove(theThumbnail);
     }
-
 
 }

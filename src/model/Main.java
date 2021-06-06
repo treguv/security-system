@@ -15,7 +15,6 @@ public class Main extends Application {
         Scene scene = new Scene(root, 600, 400);
         primaryStage.setTitle("SimpliSafe Ultimate Security Pro Max Plus 9000 Edition v1");
         primaryStage.setScene(scene);
-//        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
