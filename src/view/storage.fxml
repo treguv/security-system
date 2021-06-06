@@ -1,25 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 
 <BorderPane fx:id="myBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="616.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
     <top>
-        <HBox fx:id="myHBox" BorderPane.alignment="CENTER">
-            <Label fx:id="myHome" prefHeight="39.0" prefWidth="62.0" text="Home" textAlignment="RIGHT">
-                <font>
-                    <Font name="Ebrima" size="16.0" />
-                </font>
-                <opaqueInsets>
-                    <Insets />
-                </opaqueInsets>
-            <padding>
-               <Insets left="10.0" />
-            </padding>
-            </Label>
-        </HBox>
+        <fx:include source="myNavbar.fxml"/>
     </top>
    <left>
       <Pane prefHeight="386.0" prefWidth="26.0" BorderPane.alignment="CENTER" />

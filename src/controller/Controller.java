@@ -26,17 +26,25 @@ public class Controller {
     @FXML
     private FlowPane myFlowPane;
 
-    @FXML
-    private Label myHome;
 
     @FXML
     private VBox myVBox;
 
-    @FXML
-    private HBox myHBox;
 
     @FXML
     private BorderPane myBorderPane;
+
+    @FXML
+    public void highlight(Label label) {
+        //color for when mouse is hovering over a label
+        label.setStyle("-fx-background-color: #383838; -fx-text-fill: #ffffff");
+    }
+
+    @FXML
+    public void unhighlight(Label label) {
+        //this should match the side menu and nav bar
+        label.setStyle("-fx-background-color: #212121; -fx-text-fill: #ffffff");
+    }
 
     @FXML
     public void initialize() {
@@ -50,13 +58,9 @@ public class Controller {
             TestButton testButton = new TestButton(button, this);
             myVBox.getChildren().add(testButton);
         }
-        myHome.addEventHandler(MouseEvent.MOUSE_ENTERED, e -> highlight(myHome));
-        myHome.addEventHandler(MouseEvent.MOUSE_EXITED, e -> unhighlight(myHome));
-        myHome.setTextFill(Controller.TEXT_COLOR);
         //test button side menu color and nav bar color
         //these two should match
         myVBox.setStyle("-fx-background-color: #212121");
-        myHBox.setStyle("-fx-background-color: #212121");
         //background color
         myBorderPane.setStyle("-fx-background-color: #181818");
     }
@@ -66,14 +70,5 @@ public class Controller {
         myFlowPane.getChildren().remove(theThumbnail);
     }
 
-    public void highlight(final Label theLabel) {
-        //color for when mouse is hovering over a label
-        theLabel.setStyle("-fx-background-color: #383838; -fx-text-fill: #ffffff");
-    }
-
-    public void unhighlight(final Label theLabel) {
-        //this should match the side menu and nav bar
-        theLabel.setStyle("-fx-background-color: #212121; -fx-text-fill: #ffffff");
-    }
 
 }
