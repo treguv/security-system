@@ -1,7 +1,7 @@
 * {
   -fx-background-color:#212121;
 }
-.label {
+.toggle-button {
     -fx-font-family: "Ebrima";
     -fx-font-size: 16;
     -fx-pref-height:39;

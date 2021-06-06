@@ -7,5 +7,13 @@
 <HBox fx:id="myHBox" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx" stylesheets="@myNavbar.css"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="controller.MyNavbar" >
-    <Label fx:id="myHome" onMouseEntered="#highlight" onMouseExited="#unhighlight">Home</Label>
+
+    <fx:define>
+        <ToggleGroup fx:id="myToggleGroup"/>
+    </fx:define>
+    <children>
+        <ToggleButton text="Home" toggleGroup="$myToggleGroup"> </ToggleButton>
+        <ToggleButton text="Video" toggleGroup="$myToggleGroup"> </ToggleButton>
+        <ToggleButton text="About" toggleGroup="$myToggleGroup"> </ToggleButton>
+    </children>
 </HBox>
