@@ -8,7 +8,7 @@
 <BorderPane fx:id="myBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="616.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
     <top>
         <HBox fx:id="myHBox" BorderPane.alignment="CENTER">
-            <Label fx:id="myHome" prefHeight="39.0" prefWidth="79.0" text="Home" textAlignment="RIGHT">
+            <Label fx:id="myHome" prefHeight="39.0" prefWidth="62.0" text="Home" textAlignment="RIGHT">
                 <font>
                     <Font name="Ebrima" size="16.0" />
                 </font>

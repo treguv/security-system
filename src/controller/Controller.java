@@ -15,7 +15,7 @@ import model.Thumbnail;
 public class Controller {
 
     //text color
-    public static Color TEXT_COLOR = Color.valueOf("616161");
+    public static Color TEXT_COLOR = Color.valueOf("ffffff");
 
     //Sample videos
     private final String[] myVideos = {"Motion_1", "Recording_1", "Live_Replay", "Recording_2", "Recording_3"};
@@ -55,10 +55,10 @@ public class Controller {
         myHome.setTextFill(Controller.TEXT_COLOR);
         //test button side menu color and nav bar color
         //these two should match
-        myVBox.setStyle("-fx-background-color: #212122");
-        myHBox.setStyle("-fx-background-color: #424242");
+        myVBox.setStyle("-fx-background-color: #212121");
+        myHBox.setStyle("-fx-background-color: #212121");
         //background color
-        myBorderPane.setStyle("-fx-background-color: #212121");
+        myBorderPane.setStyle("-fx-background-color: #181818");
     }
 
     @FXML
@@ -68,12 +68,12 @@ public class Controller {
 
     public void highlight(final Label theLabel) {
         //color for when mouse is hovering over a label
-        theLabel.setStyle("-fx-background-color: #757575; -fx-text-fill: #ffffff");
+        theLabel.setStyle("-fx-background-color: #383838; -fx-text-fill: #ffffff");
     }
 
     public void unhighlight(final Label theLabel) {
         //this should match the side menu and nav bar
-        theLabel.setStyle("-fx-background-color: #212121; -fx-text-fill: #616161");
+        theLabel.setStyle("-fx-background-color: #212121; -fx-text-fill: #ffffff");
     }
 
 }
