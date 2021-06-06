@@ -24,4 +24,5 @@ public class MyNavbar {
 
     @FXML
     public ToggleGroup myToggleGroup;
+
 }

@@ -8,7 +8,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
 /**
- * This class creates a
+ * This class creates a thumbnail to
  */
 public class Thumbnail extends AnchorPane {
 
@@ -23,7 +23,7 @@ public class Thumbnail extends AnchorPane {
     public Thumbnail(final String theTitle, final Controller theController) {
         myTitle = theTitle;
         myController = theController;
-        setPrefSize(121, 132);
+        setPrefSize(120, 130);
         ImageView[] views = setupImages();
         for (ImageView view : views) {
             getChildren().add(view);
@@ -34,21 +34,15 @@ public class Thumbnail extends AnchorPane {
     private ImageView[] setupImages() {
         ImageView defaultImage = new ImageView();
         defaultImage.setImage(DEFAULT_IMAGE);
-        defaultImage.setFitHeight(118);
+        defaultImage.setFitHeight(120);
         defaultImage.setFitWidth(120);
-        defaultImage.setPickOnBounds(true);
-        defaultImage.setPreserveRatio(true);
-        defaultImage.setOnMouseEntered(e -> setCursor(Cursor.HAND));
 
         ImageView trashIcon = new ImageView();
         trashIcon.setImage(TRASH_ICON);
-        trashIcon.setFitHeight(14);
+        trashIcon.setFitHeight(15);
         trashIcon.setFitWidth(15);
-        trashIcon.setLayoutX(98);
-        trashIcon.setLayoutY(105);
-        trashIcon.setPickOnBounds(true);
-        trashIcon.setPreserveRatio(true);
-        trashIcon.setOnMouseEntered(e -> setCursor(Cursor.HAND));
+        trashIcon.setLayoutX(100);
+        trashIcon.setLayoutY(109);
         trashIcon.setOnMouseClicked(e -> myController.delete(this));
         return new ImageView[] {defaultImage, trashIcon};
     }
@@ -56,9 +50,8 @@ public class Thumbnail extends AnchorPane {
     private Label setupTitle() {
         Label title = new Label();
         title.setText(myTitle);
-        title.setLayoutX(8);
-        title.setLayoutY(104);
-        title.setTextFill(Controller.TEXT_COLOR);
+        title.setLayoutX(15);
+        title.setLayoutY(105);
         return title;
     }
 
