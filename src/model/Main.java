@@ -11,7 +11,7 @@ public class Main extends Application {
 
     @Override
     public void start(final Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/storage.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/base.fxml")));
         Scene scene = new Scene(root, 600, 400);
         primaryStage.setTitle("SimpliSafe Ultimate Security Pro Max Plus 9000 Edition v1");
         primaryStage.setScene(scene);

@@ -5,8 +5,8 @@
     -fx-font-family: "Ebrima";
     -fx-font-size: 16;
     -fx-pref-height:39;
-    -fx-pref-width:62;
+    -fx-pref-width:72;
     -fx-text-alignment: right;
     -fx-text-fill: white;
-    -fx-padding: 0 0 0 10
+    -fx-padding: 0 10 0 10
 }

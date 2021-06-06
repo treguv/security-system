@@ -19,6 +19,8 @@ public class Controller {
 
     //Sample test buttons
     private final String[] myButtons = {"Test_1", "Test_2", "Test_3", "Test_4", "Test_5"};
+    public BorderPane pane;
+
 
     @FXML
     private FlowPane myFlowPane;
