@@ -1,0 +1,22 @@
+* {
+    -fx-background-color: #181818;
+    -fx-text-fill: #ffffff;
+}
+
+#myVBox {
+    -fx-background-color: #212121
+}
+
+#myVBox .label {
+    -fx-background-color: #212121
+}
+
+#myVBox .label:hover {
+    -fx-background-color: #383838;
+    -fx-cursor: hand;
+}
+
+#myFlowPane *:hover {
+    -fx-cursor: hand;
+}
+
