@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<HBox fx:id="myHBox" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx" stylesheets="@myNavbar.css"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.MyNavbar" >
+
+    <fx:define>
+        <ToggleGroup fx:id="myToggleGroup"/>
+    </fx:define>
+    <children>
+<!--        The id names here are actually the names of the fxml objects they are meant to link to, so don't change these
+without changing the filenames-->
+        <ToggleButton fx:id="sensors" text="Home" toggleGroup="$myToggleGroup"> </ToggleButton>
+        <ToggleButton fx:id="storage" text="Video" toggleGroup="$myToggleGroup"> </ToggleButton>
+        <ToggleButton fx:id="about" text="About" toggleGroup="$myToggleGroup"> </ToggleButton>
+    </children>
+</HBox>

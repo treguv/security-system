@@ -12,13 +12,11 @@ import java.util.Objects;
 public class Main extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
-        //loads storage.fxml scene
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/storage.fxml")));
-        primaryStage.setTitle("SimpliSafe Ultimate Security Pro Max Plus 9000 Edition v1");
+    public void start(final Stage primaryStage) throws Exception {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/base.fxml")));
         Scene scene = new Scene(root, 600, 400);
+        primaryStage.setTitle("SimpliSafe Ultimate Security Pro Max Plus 9000 Edition v1");
         primaryStage.setScene(scene);
-        primaryStage.setResizable(false);
         primaryStage.show();
         TestSensors testSensors = new TestSensors();
         testSensors.simulateBreakin();
@@ -29,4 +27,5 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+
 }
