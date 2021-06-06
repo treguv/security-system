@@ -5,12 +5,12 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="616.0" style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+<BorderPane fx:id="myBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="616.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
     <top>
-        <HBox style="-fx-background-color: #1f1b24;" BorderPane.alignment="CENTER">
-            <Label fx:id="myHome" onMouseEntered="#highlight" onMouseExited="#unhighlight" prefHeight="39.0" prefWidth="50.0" text="Home " textAlignment="RIGHT" textFill="#616161">
+        <HBox fx:id="myHBox" BorderPane.alignment="CENTER">
+            <Label fx:id="myHome" prefHeight="39.0" prefWidth="79.0" text="Home" textAlignment="RIGHT">
                 <font>
-                    <Font name="Ebrima" size="12.0" />
+                    <Font name="Ebrima" size="16.0" />
                 </font>
                 <opaqueInsets>
                     <Insets />
@@ -28,7 +28,7 @@
       <FlowPane fx:id="myFlowPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
    </center>
    <right>
-       <VBox fx:id="myVBox" prefHeight="386.0" prefWidth="126.0" style="-fx-background-color: #1f1b24;" BorderPane.alignment="CENTER">
+       <VBox fx:id="myVBox" prefHeight="386.0" prefWidth="126.0" BorderPane.alignment="CENTER">
 
        </VBox>
    </right>
