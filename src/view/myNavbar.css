@@ -1,0 +1,12 @@
+* {
+  -fx-background-color:#212121;
+}
+.toggle-button {
+    -fx-font-family: "Ebrima";
+    -fx-font-size: 16;
+    -fx-pref-height:39;
+    -fx-pref-width:62;
+    -fx-text-alignment: right;
+    -fx-text-fill: white;
+    -fx-padding: 0 0 0 10
+}

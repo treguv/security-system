@@ -1,6 +1,7 @@
 package model;
 
 import controller.Controller;
+import controller.MyNavbar;
 import javafx.scene.control.Label;
 
 public class TestButton extends Label {
@@ -12,8 +13,8 @@ public class TestButton extends Label {
         setText(theName);
         setTextFill(Controller.TEXT_COLOR);
         setMaxWidth(Integer.MAX_VALUE);
-        setOnMouseEntered(e -> myController.highlight(this));
-        setOnMouseExited(e -> myController.unhighlight(this));
+        setOnMouseEntered(e -> theController.highlight(this));
+        setOnMouseExited(e -> theController.unhighlight(this));
     }
 
 }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+<HBox fx:id="myHBox" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx" stylesheets="@myNavbar.css"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.MyNavbar" >
+
+    <fx:define>
+        <ToggleGroup fx:id="myToggleGroup"/>
+    </fx:define>
+    <children>
+        <ToggleButton text="Home" toggleGroup="$myToggleGroup"> </ToggleButton>
+        <ToggleButton text="Video" toggleGroup="$myToggleGroup"> </ToggleButton>
+        <ToggleButton text="About" toggleGroup="$myToggleGroup"> </ToggleButton>
+    </children>
+</HBox>
