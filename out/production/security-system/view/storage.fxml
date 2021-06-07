@@ -2,19 +2,8 @@
 
 <?import javafx.scene.layout.*?>
 
-<BorderPane fx:id = "pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"  prefWidth="616.0" stylesheets="@storage.css" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
-    <top>
-        <fx:include source="myNavbar.fxml" />
-    </top>
-   <left>
-      <Pane prefHeight="386.0" prefWidth="26.0" BorderPane.alignment="CENTER" />
-   </left>
-   <center>
-      <FlowPane fx:id="myFlowPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
-   </center>
-   <right>
-       <VBox fx:id="myVBox" prefHeight="386.0" prefWidth="126.0" BorderPane.alignment="CENTER">
 
-       </VBox>
-   </right>
-</BorderPane>
+<FlowPane fx:id="myFlowPane" prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/"
+          xmlns:fx="http://javafx.com/fxml/1" stylesheets="@storage.css" fx:controller="controller.Controller"/>
+
+
