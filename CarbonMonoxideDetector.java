@@ -1,8 +1,6 @@
 package model.sensors;
 
 
-
-
 public class CarbonMonoxideDetector implements Sensor {
 
 	private static final double LOWCOMIN = 0.5;
@@ -16,6 +14,7 @@ public class CarbonMonoxideDetector implements Sensor {
 	private double CMParticle;
 	String deviceID;
 	boolean deviceState;
+	private boolean isTriggered = false;
 
 	public CarbonMonoxideDetector(final String ID,final Boolean state,final String carbonLevel,final double carbonParticle){
 
@@ -76,8 +75,20 @@ public class CarbonMonoxideDetector implements Sensor {
 		deviceState = state;
 	}
 
+    /**
+     * returns the current status of the sensor
+     * @return sensors isTriggered field
+     */
 	public boolean isTriggered() {
 
-		return false;
+		return this.isTriggered;
 	}
+	
+    /**
+     * Updates the trigger status of the sensor
+     * @param theStatus the updated status
+     */
+    public void setTriggered(boolean theStatus){
+        isTriggered = theStatus;
+    }
 }
