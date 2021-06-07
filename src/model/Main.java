@@ -5,6 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import model.sensors.TestSensors;
+
 import java.util.Objects;
 
 public class Main extends Application {
@@ -16,6 +18,10 @@ public class Main extends Application {
         primaryStage.setTitle("SimpliSafe Ultimate Security Pro Max Plus 9000 Edition v1");
         primaryStage.setScene(scene);
         primaryStage.show();
+        TestSensors testSensors = new TestSensors();
+        testSensors.simulateBreakin();
+        testSensors.simulateDoorBellRing();
+        testSensors.simulateContactEmergencyServices();
     }
 
     public static void main(String[] args) {

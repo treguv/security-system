@@ -17,7 +17,6 @@ public class Controller {
     //Sample videos
     private final String[] myVideos = {"Motion_1", "Recording_1", "Live_Replay", "Recording_2", "Recording_3"};
 
-
     public BorderPane pane;
 
 
@@ -32,7 +31,6 @@ public class Controller {
             Thumbnail thumbnail = new Thumbnail(video, this);
             myFlowPane.getChildren().add(thumbnail);
         }
-
 
     }
 
