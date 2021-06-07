@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!--This template is used for the panel of live and recorded videos. The controller actually populates the FlowPane
+ with mockup thumbnails. -->
+
 <?import javafx.scene.layout.*?>
 
 <BorderPane fx:id = "pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"  prefWidth="616.0" stylesheets="@storage.css" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
