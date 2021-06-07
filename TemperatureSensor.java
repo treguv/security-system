@@ -2,13 +2,9 @@ package model.sensors;
 
 import java.util.*;
 
-
-
 /**
  *
- * @author
- * 
- * 
+ * @author 
  * 
  */
 
@@ -17,6 +13,8 @@ public class TemperatureSensor implements Sensor {
 	private String TemperatureLevel;
 	public String deviceID;
 	public boolean deviceState;
+	private boolean isTriggered = false;
+	
 
 	public TemperatureSensor(String deviceID, boolean state, double Temperature) {
 		this.deviceID = deviceID;
@@ -43,10 +41,22 @@ public class TemperatureSensor implements Sensor {
 	}
 
 
+    /**
+     * returns the current status of the sensor
+     * @return sensors isTriggered field
+     */
 	public boolean isTriggered() {
 
-		return false;
+		return this.isTriggered;
 	}
+	
+    /**
+     * Updates the trigger status of the sensor
+     * @param theStatus the updated status
+     */
+    public void setTriggered(boolean theStatus){
+        isTriggered = theStatus;
+    }
 
 	public void turnOnOff() {
 		deviceState = !deviceState;
