@@ -2,7 +2,9 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<HBox fx:id="myHBox" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx" stylesheets="@myNavbar.css"
+<!--This template is used for the navigation bar app-wide. It consists of three buttons in an HBox. Because the buttons
+are in a group, they are assigned event listeners as a batch in the controller file. -->
+<HBox BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx" stylesheets="@myNavbar.css"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="controller.MyNavbar" >
 
@@ -10,7 +12,7 @@
         <ToggleGroup fx:id="myToggleGroup"/>
     </fx:define>
     <children>
-<!--        The id names here are actually the names of the fxml objects they are meant to link to, so don't change these
+<!--        The id names here are actually the names of the fxml files they are meant to link to, so don't change these
 without changing the filenames-->
         <ToggleButton fx:id="sensors" text="Home" toggleGroup="$myToggleGroup"> </ToggleButton>
         <ToggleButton fx:id="storage" text="Video" toggleGroup="$myToggleGroup"> </ToggleButton>

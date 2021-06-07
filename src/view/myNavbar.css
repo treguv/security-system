@@ -1,6 +1,8 @@
 * {
   -fx-background-color:#212121;
 }
+
+
 .toggle-button {
     -fx-font-family: "Ebrima";
     -fx-font-size: 16;
@@ -8,5 +10,11 @@
     -fx-pref-width:72;
     -fx-text-alignment: right;
     -fx-text-fill: white;
-    -fx-padding: 0 10 0 10
+    -fx-padding: 0 10 0 10;
+    -fx-background-color: #212121;
+}
+
+.toggle-button:hover{
+    -fx-background-color: #383838;
+    -fx-text-fill: #ffffff
 }
