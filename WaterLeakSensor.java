@@ -7,12 +7,13 @@ public class WaterLeakSensor implements Sensor {
 	private boolean waterLeakDectected;
 	String deviceID;
 	boolean deviceState;
+	private boolean isTriggered = false;
 
 
 	/**
 
-	 * @param Kidus
-	 * @param 
+	 * @author Kidus
+	 *  
 	 */
 	public WaterLeakSensor(final String ID,final boolean state){
 		this.deviceID = ID;
@@ -54,12 +55,23 @@ public class WaterLeakSensor implements Sensor {
 	public void setDeviceState(boolean state) {
 		deviceState = state;
 	}
-
+	
+    /**
+     * returns the current status of the sensor
+     * @return sensors isTriggered field
+     */
 	public boolean isTriggered() {
 
-		return false;
+		return this.isTriggered;
 	}
-
+	
+    /**
+     * Updates the trigger status of the sensor
+     * @param theStatus the updated status
+     */
+    public void setTriggered(boolean theStatus){
+        isTriggered = theStatus;
+    }
 }
 
 
