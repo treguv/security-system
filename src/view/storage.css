@@ -1,0 +1,9 @@
+* {
+    -fx-background-color: #181818;
+    -fx-text-fill: #ffffff;
+}
+
+#myFlowPane *:hover {
+    -fx-cursor: hand;
+}
+
