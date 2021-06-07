@@ -9,6 +9,10 @@ import javax.sound.midi.Soundbank;
  * @version 1
  */
 public class DoorbellCamera extends Camera  {
+
+    public DoorbellCamera(String theName){
+        super(theName);
+    }
     /**
      * temp place holder for testing a doorbell being rang
      */

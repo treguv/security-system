@@ -5,15 +5,16 @@ package model.sensors;
  * @author Vlad
  * @version 1
  */
-public class MotionSensor {
+public class MotionSensor extends Sensor implements IsTriggerable {
     private boolean isTriggered = false;
     private boolean isConnected = true;
+    private String myName;
     /**
      * Just kinda because i can
      */
     private boolean isBroken = false;
-    public MotionSensor(){
-
+    public MotionSensor(String theName){
+        super(theName);
     }
 
     /**
@@ -36,5 +37,13 @@ public class MotionSensor {
      */
     public void testTriggerSensor(){
         isTriggered = true;
+    }
+
+    /**
+     * Checks if the given sensor has been triggered.
+     * @return true if has been triggered
+     */
+    public boolean isTriggered(){
+        return isTriggered;
     }
 }

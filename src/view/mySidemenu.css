@@ -1,0 +1,12 @@
+* {
+    -fx-background-color: #212121
+}
+
+.label {
+    -fx-background-color: #212121
+}
+
+.label:hover {
+    -fx-background-color: #383838;
+    -fx-cursor: hand;
+}
