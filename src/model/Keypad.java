@@ -1,4 +1,4 @@
-package model.sensors;
+package model;
 
 import com.sun.xml.internal.bind.v2.runtime.output.StAXExStreamWriterOutput;
 

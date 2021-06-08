@@ -1,4 +1,4 @@
-package model.sensors;
+package model;
 
 /**
  * This will implement all the methods that will be shared by all the child classes
