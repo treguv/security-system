@@ -1,4 +1,4 @@
-package model.sensors;
+package model;
 /**
  * TODO remove this class before final submission
  * This class will be used to test the functionality of the sensors

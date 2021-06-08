@@ -1,4 +1,4 @@
-package model.sensors;
+package model;
 
 /**
  * This is the class that mimics the door sensor

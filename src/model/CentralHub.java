@@ -1,4 +1,4 @@
-package model.sensors;
+package model;
 
 public class CentralHub {
 }
