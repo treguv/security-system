@@ -1,7 +1,7 @@
-package model.sensors;
+package model;
 
 
-public class CarbonMonoxideDetector implements Sensor {
+public class CarbonMonoxideDetector extends Sensor {
 
 	private static final double LOWCOMIN = 0.5;
 	private static final double LOWCOMAX = 5.0;
@@ -16,14 +16,10 @@ public class CarbonMonoxideDetector implements Sensor {
 	boolean deviceState;
 	private boolean isTriggered = false;
 
-	public CarbonMonoxideDetector(final String ID,final Boolean state,final String carbonLevel,final double carbonParticle){
-
-		this.deviceID = ID;
-		this.deviceState = state;
-		this.CMLevel = carbonLevel;
-		this.CMParticle = carbonParticle;
-
+	public CarbonMonoxideDetector(String theName) {
+		super(theName);
 	}
+
 
 	public String getCMLevel() {
 
