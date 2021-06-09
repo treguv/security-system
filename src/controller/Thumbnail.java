@@ -21,7 +21,7 @@ public class Thumbnail extends AnchorPane {
 
     private final Controller myController;
 
-    private final String[] ICONS = {"img_live_1.png"};
+    private final String[] ICONS = {"img_live_1.png", "img_live_2.png"};
     public Thumbnail(final String theTitle, final Controller theController) {
 
         myTitle = theTitle;
@@ -44,8 +44,9 @@ public class Thumbnail extends AnchorPane {
         myTitle = theTitle;
         myController = theController;
         setPrefSize(120, 130);
-        ImageView[] views = setupImages();
+        ImageView[] views = setupImages(theIcon);
         for (ImageView view : views) {
+
             getChildren().add(view);
         }
         getChildren().add(setupTitle());
@@ -54,6 +55,36 @@ public class Thumbnail extends AnchorPane {
     private ImageView[] setupImages() {
         ImageView defaultImage = new ImageView();
         defaultImage.setImage(DEFAULT_IMAGE);
+        defaultImage.setFitHeight(120);
+        defaultImage.setFitWidth(120);
+
+        ImageView trashIcon = new ImageView();
+        trashIcon.setImage(TRASH_ICON);
+        trashIcon.setFitHeight(15);
+        trashIcon.setFitWidth(15);
+        trashIcon.setLayoutX(100);
+        trashIcon.setLayoutY(109);
+        trashIcon.setOnMouseClicked(e -> myController.delete(this));
+        return new ImageView[] {defaultImage, trashIcon};
+    }
+
+    /**
+     * overloaded Image View method that allows for icon selection
+     * @param theIcon
+     * @return
+     */
+    private ImageView[] setupImages(int theIcon) {
+        Image theImage = DEFAULT_IMAGE;
+        //if we have a valid url we can change the image otherwise it will be normal
+        switch (theIcon){
+            case 1:
+                theImage = new Image(ICONS[0]);
+                break;
+            case 2:
+                theImage = new Image(ICONS[1]);
+        }
+        ImageView defaultImage = new ImageView();
+        defaultImage.setImage(theImage);
         defaultImage.setFitHeight(120);
         defaultImage.setFitWidth(120);
 
