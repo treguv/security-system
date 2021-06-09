@@ -21,7 +21,8 @@ public class Thumbnail extends AnchorPane {
 
     private final Controller myController;
 
-    private final String[] ICONS = {"img_live_1.png", "img_live_2.png"};
+    private final String[] ICONS = {"img_live_1.png", "img_live_2.png", "img_live_3.png",
+            "img_live_4.png", "img_live_5.png", "img_live_6.png", "img_live_7.png", "img_live_8.png"};
     public Thumbnail(final String theTitle, final Controller theController) {
 
         myTitle = theTitle;
@@ -82,6 +83,25 @@ public class Thumbnail extends AnchorPane {
                 break;
             case 2:
                 theImage = new Image(ICONS[1]);
+                break;
+            case 3:
+                theImage = new Image(ICONS[2]);
+                break;
+            case 4:
+                theImage = new Image(ICONS[3]);
+                break;
+            case 5:
+                theImage = new Image(ICONS[4]);
+                break;
+            case 6:
+                theImage = new Image(ICONS[5]);
+                break;
+            case 7:
+                theImage = new Image(ICONS[6]);
+                break;
+            case 8:
+                theImage = new Image(ICONS[7]);
+                break;
         }
         ImageView defaultImage = new ImageView();
         defaultImage.setImage(theImage);

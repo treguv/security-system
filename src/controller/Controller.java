@@ -21,7 +21,7 @@ public class Controller {
         //Adds sample videos to flow pane
         //temp vars to hold the amount of possible icons
         int min = 1;
-        int max = 2;
+        int max = 8; // this should be the number of available images
         int range = max - min + 1;
         for(String video : myVideos) {
             int number = (int) (Math.random()  * range) + min;
