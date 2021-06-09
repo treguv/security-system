@@ -87,4 +87,6 @@ public class CarbonMonoxideDetector extends Sensor {
     public void setTriggered(boolean theStatus){
         isTriggered = theStatus;
     }
+
+
 }
