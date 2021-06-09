@@ -4,6 +4,10 @@ import javafx.fxml.FXML;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 
 public class Controller {
 
@@ -18,14 +22,10 @@ public class Controller {
 
     @FXML
     public void initialize() {
-        //Adds sample videos to flow pane
-        //temp vars to hold the amount of possible icons
-        int min = 1;
-        int max = 8; // this should be the number of available images
-        int range = max - min + 1;
-        for(String video : myVideos) {
-            int number = (int) (Math.random()  * range) + min;
-            Thumbnail thumbnail = new Thumbnail(video, this, number);
+        String theSeed = getSeed();
+        for(int i = 0; i < myVideos.length; i++) {
+            int curIcon = (theSeed.charAt(i)-48) % 8;
+            Thumbnail thumbnail = new Thumbnail(myVideos[i], this, curIcon);
             myFlowPane.getChildren().add(thumbnail);
         }
 
@@ -34,6 +34,24 @@ public class Controller {
     @FXML
     public void delete(final Thumbnail theThumbnail) {
         myFlowPane.getChildren().remove(theThumbnail);
+    }
+
+    private String getSeed(){
+        String seed = "";
+        try {
+            File myObj = new File("seed.txt");
+            Scanner myReader = new Scanner(myObj);
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                //there should only ever be one line in the file
+                seed = data;
+            }
+            myReader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+        return seed;
     }
 
 }
