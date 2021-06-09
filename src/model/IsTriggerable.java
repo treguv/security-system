@@ -1,4 +1,4 @@
-package model.sensors;
+package model;
 
 /**
  * This is the interface parent class that will allow us to store all the sensors in a single DS

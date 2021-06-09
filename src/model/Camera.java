@@ -1,4 +1,4 @@
-package model.sensors;
+package model;
 
 /**
  * This class will emulate the function of a camera
@@ -15,6 +15,7 @@ public class Camera extends Sensor implements IsTriggerable {
      */
     public Camera(String theName){
         super(theName);
+        myName = theName;
         isOnline = true;
     }
 

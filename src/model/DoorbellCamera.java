@@ -1,7 +1,4 @@
-package model.sensors;
-
-import javax.crypto.spec.PSource;
-import javax.sound.midi.Soundbank;
+package model;
 
 /**
  * this is an extension of the camera with a few extra methods to function as a doorbell

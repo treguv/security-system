@@ -1,4 +1,4 @@
-package model.sensors;
+package model;
 
 /**
  * This class simulates contacting emergency services

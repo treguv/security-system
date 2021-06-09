@@ -1,3 +1,18 @@
 * {
     -fx-font-size: 50;
+    -fx-background-color: white;
+}
+/*
+Rectangle {
+    -fx-fill: red;
+}
+
+Circle {
+    radius: 5px;
+    -fx-fill: green;
+}
+*/
+ImageView {
+    /*-fx-image: url("../../resources/doorbell.png")*/
+    /*-fx-image: url("https://www.ghacks.net/wp-content/uploads/2019/08/google-images-right-side-preview.png")*/
 }

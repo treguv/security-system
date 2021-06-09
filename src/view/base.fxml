@@ -2,11 +2,19 @@
 
 <?import javafx.scene.layout.*?>
 
-<BorderPane fx:id = "pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="616.0" stylesheets="@storage.css" xmlns="http://javafx.com/javafx/8.0.202-ea" xmlns:fx="http://javafx.com/fxml/1">
+<!--This template is used to be a root element in which all other elements reside. The navbar includes buttons which
+change what the center of this Border layout holds-->
+
+<BorderPane fx:id = "pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="425.0" prefWidth="616.0" stylesheets="@storage.css" xmlns="http://javafx.com/javafx/8.0.202-ea"
+            xmlns:fx="http://javafx.com/fxml/1">
     <top>
         <fx:include source="myNavbar.fxml"/>
     </top>
     <center>
         <fx:include source="storage.fxml"/>
     </center>
+    <right>
+        <fx:include source="mySidemenu.fxml"/>
+    </right>
 </BorderPane>

@@ -1,4 +1,4 @@
-package model.sensors;
+package model;
 
 /**
  * This class will imitate the functionality of the motion sensor
