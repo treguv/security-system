@@ -5,14 +5,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import model.TestSensors;
-
 import java.io.FileWriter;
 import java.util.Objects;
 import java.util.Random;
-//seed
-import java.io.File;
 import java.io.IOException;
+
 public class Main extends Application {
 
     @Override
@@ -25,7 +22,6 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-
         generateSeed();
         launch(args);
     }
@@ -65,6 +61,4 @@ public class Main extends Application {
         System.out.println(randomNumber);
         return randomNumber;
     }
-
-
 }

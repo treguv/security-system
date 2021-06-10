@@ -1,21 +1,15 @@
 package controller;
 
 import javafx.fxml.FXML;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-
 
 public class Controller {
 
     //Sample videos
     private final String[] myVideos = {"Motion_1", "Recording_1", "Live_Replay", "Recording_2", "Recording_3"};
-
-    public BorderPane pane;
-
 
     @FXML
     private FlowPane myFlowPane;
@@ -28,7 +22,6 @@ public class Controller {
             Thumbnail thumbnail = new Thumbnail(myVideos[i], this, curIcon);
             myFlowPane.getChildren().add(thumbnail);
         }
-
     }
 
     @FXML
@@ -42,9 +35,8 @@ public class Controller {
             File myObj = new File("seed.txt");
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
-                String data = myReader.nextLine();
                 //there should only ever be one line in the file
-                seed = data;
+                seed = myReader.nextLine();
             }
             myReader.close();
         } catch (FileNotFoundException e) {
@@ -53,5 +45,4 @@ public class Controller {
         }
         return seed;
     }
-
 }

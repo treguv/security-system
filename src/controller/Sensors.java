@@ -1,15 +1,12 @@
 package controller;
 
 import javafx.fxml.FXML;
+import javafx.scene.effect.ColorAdjust;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
-
-import java.io.FileInputStream;
 
 public class Sensors{
 
@@ -23,13 +20,15 @@ public class Sensors{
             try {
                 ImageView image = new ImageView();
                 image.setImage(new Image(s + ".png"));
+                ColorAdjust whiteOut = new ColorAdjust();
+                whiteOut.setBrightness(1.0);
+                image.setEffect(whiteOut);
                 image.setFitHeight(100);
                 image.setFitWidth(100);
                 grid.add(image, i%10, i/10,4,1);
                 i+=4;
                 grid.add(new Circle(4, Color.GREEN),i%10,i/10,1,1);
                 i++;
-
             } catch (Exception e) {
                 System.out.println("couldn't bruh");
             }

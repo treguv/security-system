@@ -35,5 +35,4 @@ public class MySidemenu {
         cmd.setOnMouseClicked(e -> myTests.simulateCarbonMonoxideDetectorDetectionCarbonMonoxide());
         myVBox.getChildren().add(cmd);
     }
-
 }
