@@ -1,11 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml" >
-<Label>
-    Fill in this page
-</Label>
+                                                  Table of Contents
+    Table of Contents
+    1. Introduction							    2
+        1.1 Product Overview						    2
+        1.2 Purview						                2
+    2. Overall Product Description 					                2
+        2.1 Product Outlook						    2
+        2.1.1 System Interface					                2
+        2.1.2 User Interface					    	    2
+                Keypad                                                                              2
+        2.1.3 Communication interface					    3
+        2.2 Product                                                                                 3
+        2.2.1 Central Hub 						    3
+        2.2.2 Keypad 						                3
+        2.2.3 Sensors 							    3
+                Motion Sensors						    3
+                Door Sensors					                3
+                Carbon Monoxide sensor       					    3
+        2.2.4 Camera							    3
+        2.2.5 Emergency Services 					                3
+    3. Specification Requirements 					                4
+        3.1 Software System Behaviors					    4
+            Reliability							    4
+            Availability						    4
+            Security						                4
+            Maintainability			     			    4
+            Portability					     	                4
+        3.2 Privacy and Constraints					                4
+
+
+
+
+
+
+
+    1. Introduction
+        SimpliSafe, established in Boston, Massachusetts, is an American home security firm. Self-installed wireless security systems that connect to a central monitoring center are produced and sold by the company.
+    1.2 Purview
+         Our product will be able to receive data from multiple sources such as Motion sensors (door sensors, excess carbon monoxide detection sensor) and user input devices (e.g., keypad) Further, we will be able to produce output via alerts to one’s home devices and our monitoring system, and potentially local emergency services. This allows the system to be able to handle a variety of safety problems ranging in severity
+
+    2. Overall Product Description
+    2.1 Product Outlook
+        The home security system described in this this app/website is a multi-device system that when installed, will secure the customer’s home by ensuring safety in the home and protecting against dangers from both outside threats and inside hazards. Through sensors and various output devices, this system will be able to provide all-around security for one’s living space. Whole Home Protection for every window, room and door. Against intruders, fires, water damage, medical emergencies & more. All monitored 24/7 by professionals ready to dispatch police.
+    2.1.1 System Interface
+        The system interface is expressed in our security system among various components and the base station, which is one of the primary components that orchestrates interconnectivity among all the other devices. As a result, the base station interacts with nearly every other component. Wireless connection is used to facilitate software interaction between these components and the base station.
+
+    2.1.2 User Interfaces
+        In this home security system, the user has physical and non-physical interaction with the components. The major physical interaction will take place between the user, the keypad feature.
+
+    Keypad Features
+    ● The user can get access through the keypad to set up different tasks. For instance, processing system settings, arming and disarming alarms, and contacting the local authorities (Fire, Police, Medical).
+    ● The keypad will have a screen format to communicate with the user as well as function keys like numerical buttons.
+
+
+    2.1.3 Communication Interfaces
+        The Central hub is the sole device that has direct internet access via the user's home wifi. Other devices will use the local network to send data to the app.
+
+    2.2 Product Functions
+    Mandatory Components
+    2.2.1 Central Hub
+        The central hub shall wirelessly connect to the Emergency Dispatch Service to notify the user and authorities of any trouble. The central hub shall sound the alarm incase of intrusion.
+    2.2.2 keypad: is a device that allows the user to communicate with a computer system. This device is situated at the home's main entrance. This gadget allows the user to customize the system's settings.
+    2.2.3 Sensors
+    Motion Sensors: are gadgets that can be installed in doors and windows. When someone opens the door/window and the alarm is not disabled, a warning sound will be heard. Because the home alarm goes off and/or the authorities are contacted, they will have one minute to disarm.
+    Door Sensors: Also have features detects movement within the house When the alarm is set to "away," the motion sensor detects movement inside the house and sends alerts to the base station, which can then warn the homeowner. The sensors are designed to be pet-friendly to reduce false alarms.
+
+    Carbon Monoxide Detection Sensor: A gadget that detects excess carbon monoxide particles in the air and alerts the central hub to the dangerous level. Normal and danger levels are the two levels of threat. The normal level denotes that the carbon monoxide density is safe to inhale, while the danger level denotes that the carbon monoxide density may cause harm.
+
+    2.2.4 Cameras
+         Our best all-around camera professional monitoring cameras that all work wirelessly that are easy installed. Cameras are durable equipment, and dependable services that make home security simple. Even if anything unexpected happens, you will have all the essential devices and functions to keep you calm in unexpected situations.
+
+    2.2.5 Emergency Services
+        From the app the user has a complete control over your home's security, you'll be able to arm and deactivate your system. For emergency services the monitoring centers will provide you with peace of mind by offering dispatch service and alerts 24 hours a day, seven days a week. If your system is triggered, it will send an alarm to SimpliSafe's monitoring center until monitoring specialists confirm receipt. If you don't respond when they call, the monitoring station will dispatch the cops or fire department right away depending on the situation.
+
+
+    3. Specification Requirements
+
+    3.1 Software System Behaviors
+    I. Reliability
+        Our system shall be accurate in its monitoring and relaying alerts.
+    II. Availability
+        The system must be available twenty-four hours a day, seven days a week to ensure uninterrupted security in one's house. Furthermore, the system must have redundancies to provide continuous and comprehensive safety.
+    III. Security
+        The system must keep user information and security logs in a secure manner. Users will have access to sensitive and private data collected by home sensors, and the monitoring department will only have access to it in emergency situations with the user's permission.
+    IV. Maintainability
+        The system will be modular, with components that may be swapped out or added to the system of the user. In the system, any enhanced version of a component can be installed. The product line includes numerous components, some of which may or may not be required by specific users—for example, a user who does not own a smartphone will not utilize the phone application.
+    V. Portability
+        The system will employ APIs to allow new components to be added to the product ecosystem and implemented. The installation of physical components will be easier, and users will be able to relocate components without difficulty.
+
+    3.2 Privacy and Constraints
+        Security and privacy will be of the utmost significance as a home security system. As a result, user data and access to system devices must be protected. Users' safety and security go hand in hand; the system should be resilient enough to keep securing one's house, especially in emergency scenarios like power outages. Furthermore, any user data and information will only be displayed and accessed by the user. Only with the administrator's permission can information be shared with the communication center for safety reasons.
+
+
+    <ScrollPane layoutX="-105.0" layoutY="14.0" prefHeight="1499.0" prefWidth="1519.0">
+        <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1501.0" prefWidth="1517.0" />
+        </content>
+    </ScrollPane>
 </AnchorPane>
