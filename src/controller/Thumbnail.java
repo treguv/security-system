@@ -1,7 +1,5 @@
 package controller;
 
-import controller.Controller;
-import javafx.scene.Cursor;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -23,17 +21,6 @@ public class Thumbnail extends AnchorPane {
 
     private final String[] ICONS = {"img_live_1.png", "img_live_2.png", "img_live_3.png",
             "img_live_4.png", "img_live_5.png", "img_live_6.png", "img_live_7.png", "img_live_8.png"};
-    public Thumbnail(final String theTitle, final Controller theController) {
-
-        myTitle = theTitle;
-        myController = theController;
-        setPrefSize(120, 130);
-        ImageView[] views = setupImages();
-        for (ImageView view : views) {
-            getChildren().add(view);
-        }
-        getChildren().add(setupTitle());
-    }
 
     /**
      * secondary constructor that allows you to change the icon on the image
@@ -51,22 +38,6 @@ public class Thumbnail extends AnchorPane {
             getChildren().add(view);
         }
         getChildren().add(setupTitle());
-    }
-
-    private ImageView[] setupImages() {
-        ImageView defaultImage = new ImageView();
-        defaultImage.setImage(DEFAULT_IMAGE);
-        defaultImage.setFitHeight(120);
-        defaultImage.setFitWidth(120);
-
-        ImageView trashIcon = new ImageView();
-        trashIcon.setImage(TRASH_ICON);
-        trashIcon.setFitHeight(15);
-        trashIcon.setFitWidth(15);
-        trashIcon.setLayoutX(100);
-        trashIcon.setLayoutY(109);
-        trashIcon.setOnMouseClicked(e -> myController.delete(this));
-        return new ImageView[] {defaultImage, trashIcon};
     }
 
     /**
