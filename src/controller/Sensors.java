@@ -6,6 +6,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Priority;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
@@ -21,15 +22,16 @@ public class Sensors{
     private void initialize(){
         int i = 0;
         ColumnConstraints column0 = new ColumnConstraints();
-        column0.setPercentWidth(40);
-        column0.setHgrow();
+        column0.setMinWidth(100);
         ColumnConstraints column1 = new ColumnConstraints();
-        column1.setPercentWidth(5);
+        column1.setMinWidth(100);
+        column1.setMaxWidth(200);
         ColumnConstraints column2 = new ColumnConstraints();
-        column2.setPercentWidth(40);
+        column2.setMinWidth(100);
         ColumnConstraints column3 = new ColumnConstraints();
-        column3.setPercentWidth(5);
-        grid.setMinWidth(500);
+        column3.setMinWidth(100);
+        column3.setMaxWidth(200);
+        grid.getColumnConstraints().addAll(column0, column1, column2, column3);
         for(String s: new String[]{"cctv", "doorbell", "doorsensor", "motion"}) {
             try {
                 ImageView image = new ImageView();
@@ -39,6 +41,8 @@ public class Sensors{
                 image.setEffect(whiteOut);
                 image.setFitWidth(100);
                 image.setFitHeight(100);
+
+
 
                 grid.add(image, i%4, i/4,1,1);
                 i++;
