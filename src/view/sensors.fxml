@@ -9,7 +9,7 @@
             prefHeight="200"
             prefWidth="200">
     <center>
-        <GridPane fx:id="grid" hgap="50"/>
+        <GridPane fx:id="grid"/>
     </center>
 
 
