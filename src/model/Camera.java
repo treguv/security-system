@@ -61,14 +61,15 @@ public class Camera extends Sensor implements IsTriggerable {
     public boolean isTriggered(){
         return isDetectingMotion;
     }
-    @Override
     /**
      * Overrides the sensor trigger method
      * will also update its is detecting motion to true
      */
+    @Override
     public void trigger() {
         isDetectingMotion = true;
-        System.out.println( myName + " has been triggered!");
+//        System.out.println( myName + " has been triggered!");
+        super.trigger();
     }
 
 }

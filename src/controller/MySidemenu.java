@@ -4,6 +4,10 @@ import javafx.fxml.FXML;
 import javafx.scene.layout.VBox;
 import model.TestSensors;
 
+/**
+ * This class is the controller for the Sidemenu view which adds all buttons and listeners to it
+ * It is responsible for calling our test scenarios defined in {@link TestSensors}
+ */
 public class MySidemenu {
 
     private final TestSensors myTests = new TestSensors();

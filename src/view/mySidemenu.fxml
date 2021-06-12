@@ -2,6 +2,7 @@
 
 <?import javafx.scene.layout.*?>
 
+<!--The sidemenu for testing scenarios, populated by its controller file of the same name-->
 <VBox fx:id="myVBox" prefHeight="386.0" prefWidth="126.0" xmlns="http://javafx.com/javafx/"
       xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MySidemenu" stylesheets="@mySidemenu.css">
 

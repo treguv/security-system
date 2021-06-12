@@ -14,6 +14,9 @@ public class Controller {
     @FXML
     private FlowPane myFlowPane;
 
+    /**
+     * Chooses random thumbnails to populate the video feed with
+     */
     @FXML
     public void initialize() {
         String theSeed = getSeed();
@@ -24,11 +27,19 @@ public class Controller {
         }
     }
 
+    /**
+     * Triggered by clicking a trash icon associated with a thumnail
+     * @param theThumbnail
+     */
     @FXML
     public void delete(final Thumbnail theThumbnail) {
         myFlowPane.getChildren().remove(theThumbnail);
     }
 
+    /**
+     * Generates random numbers from a seed stored in seed.txt
+     * @return a String representing a pseudorandom value
+     */
     private String getSeed(){
         String seed = "";
         try {

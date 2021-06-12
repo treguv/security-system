@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
 
-<BorderPane xmlns="http://javafx.com/javafx"
+<!--The sensor panel. Populated mostly from the controller file of the same name. The status of each sensor
+reacts to the test cases-->
+<AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="controller.Sensors"
             stylesheets="@sensors.css"
             prefHeight="200"
             prefWidth="200">
-    <center>
-        <GridPane fx:id="grid"/>
-    </center>
+    <GridPane AnchorPane.topAnchor="10" fx:id="grid"/>
+    <Button fx:id="dismiss" onMouseClicked="#dismiss" AnchorPane.bottomAnchor="45" AnchorPane.leftAnchor="15">Dismiss Warnings</Button>
 
 
-</BorderPane>
+</AnchorPane>
