@@ -10,7 +10,7 @@ import java.util.Objects;
 
 /**
  * This class allows for the attachment of listeners for the buttons in the navbar
- * The listener replaces the root pane's center with the appropriate view.
+ * The listener replaces the root pane's center with the appropriate view depending on what button is clicked.
  */
 public class MyNavbar {
 
@@ -30,7 +30,8 @@ public class MyNavbar {
             btn.setOnMouseClicked((e) -> {
                 BorderPane replace = (BorderPane)btn.getParent().getParent();
                 try {
-                    replace.setCenter(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/" + label + ".fxml"))));
+                    replace.setCenter(FXMLLoader.load(Objects.requireNonNull(getClass().getResource(
+                            "/view/" + label + ".fxml"))));
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }

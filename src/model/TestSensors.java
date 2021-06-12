@@ -1,8 +1,8 @@
 package model;
 /**
- * TODO remove this class before final submission
  * This class will be used to test the functionality of the sensors
- * It is to be removed when we submit the final version
+ * These methods are triggered by the sidemenu buttons, and some cases set off the sensors
+ * shown in the Sensors panel
  */
 public class TestSensors {
     //build out a basic array of sensors that we will use for testing

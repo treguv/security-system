@@ -24,9 +24,9 @@ public class Thumbnail extends AnchorPane {
 
     /**
      * secondary constructor that allows you to change the icon on the image
-     * @param theTitle
-     * @param theController
-     * @param theIcon
+     * @param theTitle Icon title
+     * @param theController A controller object to bind functionality
+     * @param theIcon A number representing the choice of icon filename from the ICONS array
      */
     public Thumbnail(final String theTitle, final Controller theController,int theIcon) {
         myTitle = theTitle;
@@ -42,7 +42,7 @@ public class Thumbnail extends AnchorPane {
 
     /**
      * overloaded Image View method that allows for icon selection
-     * @param theIcon
+     * @param theIcon Which file to be used form the ICONS array
      * @return
      */
     private ImageView[] setupImages(int theIcon) {

@@ -13,6 +13,11 @@ import java.io.IOException;
 public class Main extends Application {
     public static Sensors sensors;
 
+    /**
+     * JavaFX triggers this after calling the launch() method in main. We use it to load the base FXML file
+     * @param primaryStage  JavaFX passes in a stage upon which all other visual elements are built
+     * @throws Exception JavaFX handles this exception
+     */
     @Override
     public void start(final Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/base.fxml")));
@@ -29,6 +34,7 @@ public class Main extends Application {
 
     /**
      * This class will generate a seed that will be used by all the pseudo random parts of the program
+     * It is used to choose what thumbnails are shown in the video previews.
      * @return a seed of 10 digits
      */
     private static long generateSeed(){
