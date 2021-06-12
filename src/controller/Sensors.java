@@ -14,7 +14,8 @@ import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 
 /**
- * This class constructs the
+ * This class constructs the sensor panel and provides a trigger() method so that external events may change the
+ * visual state of the sensors (neutral vs warning).
  */
 public class Sensors{
 
@@ -23,9 +24,14 @@ public class Sensors{
     @FXML
     Button dismiss;
 
+    //These arrays hold the types of indicators (neutral, warnings) so that we may reference these elements later
+    //to remove or add them as the state changes.
     Node[] indicators = new Node[4];
     Node[] warnings = new Node[]{new Text("!"), new Text("!"), new Text("!"), new Text("!")};
 
+    /**
+     * Add all sensors and status indicators to a grid layout
+     */
     @FXML
     private void initialize(){
         Main.sensors = this;
@@ -68,6 +74,11 @@ public class Sensors{
         }
     }
 
+    /**
+     * This method is called by {@link model.Sensor} whenever any sensor is triggered.
+     * The names here reflect the names set in the {@link model.TestSensors} file
+     * @param sensor
+     */
     public void trigger(String sensor) {
         System.out.println("this worked");
         try {
@@ -98,6 +109,10 @@ public class Sensors{
         } catch(IllegalArgumentException e) {/*this occurs when it has already been triggered*/}
     }
 
+    /**
+     * This is the method called when the dismiss button is pressed
+     * It clears all warnings.
+     */
     @FXML
     private void dismiss() {
         grid.getChildren().removeAll(warnings);
