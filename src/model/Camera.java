@@ -11,7 +11,7 @@ public class Camera extends Sensor implements IsTriggerable {
     private String myName;
 
     /**
-     * default constructor sets camera online.
+     * default constructor sets camera online
      */
     public Camera(String theName){
         super(theName);
