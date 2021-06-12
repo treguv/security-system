@@ -1,17 +1,20 @@
-* {
-    -fx-font-size: 50;
+VBox {
+    -fx-padding: 10 10 10 10
 }
-/*
-Rectangle {
-    -fx-fill: red;
+Text {
+    -fx-font-size: 50;
+    -fx-fill:red;
+}
+GridPane {
+    -fx-padding: 0 0 30 0;
 }
 
-Circle {
-    radius: 5px;
-    -fx-fill: green;
+Button {
+    -fx-font-size: 15;
+    -fx-background-color: #212121;
+    -fx-padding: 10 10 10 10;
 }
-*/
-ImageView {
-    /*-fx-image: url("../../resources/doorbell.png")*/
-    /*-fx-image: url("https://www.ghacks.net/wp-content/uploads/2019/08/google-images-right-side-preview.png")*/
+Button:hover{
+    -fx-background-color: #383838;
+    -fx-text-fill: #ffffff
 }

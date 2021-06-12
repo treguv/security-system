@@ -10,7 +10,7 @@ import java.util.Objects;
 
 /**
  * This class allows for the attachment of listeners for the buttons in the navbar
- * It is sourced by the FXML file itself, so the only FXML that must be explicitly constructed is the base component
+ * The listener replaces the root pane's center with the appropriate view.
  */
 public class MyNavbar {
 

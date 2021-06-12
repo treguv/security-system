@@ -11,6 +11,7 @@ import java.util.Random;
 import java.io.IOException;
 
 public class Main extends Application {
+    public static Sensors sensors;
 
     @Override
     public void start(final Stage primaryStage) throws Exception {
